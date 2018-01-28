@@ -1,7 +1,42 @@
-# Quadratic Equations Solver
+# Решатель квадратных уравнений
 
-[TODO. There will be project description]
+Модуль содержит функцию для решения квадратного уравнения вида _**a x 2 + b x + c = 0**_
 
-# Project Goals
+# Как использовать
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+На вход функция принимает 3 параметра - коэффициенты уравнения, 
+и возвращает возможное колличество решений уравнения. В случае когда корень
+рассчитать невозможно, возвращается значение None
+
+```python
+import quadratic_equation
+
+print(quadratic_equation(1, 2, -3))
+```
+
+# Как запустить тесты
+
+Запуск на Linux:
+
+```bash
+python tests.py # может понадобиться вызов python3 вместо python, зависит от настроек операционной системы
+```
+
+Запуск на Windows происходит аналогично.
+
+# Pre-commit
+
+Для запуска тестов перед коммитом можно использовать возможности git hooks. Для этого следует положить файл pre-commit 
+в папку .git/hooks директории проекта и дать этому файлу права на исполнение:
+```bash
+mv pre-commit .git/hooks
+chmod +x pre-commit
+```
+
+Теперь если тесты не пройедны коммит не будет совершен.
+
+
+# Цели проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке ― [DEVMAN.org](https://devman.org)
+
