@@ -1,7 +1,7 @@
-#! /usr/bin/env sh
+#!/bin/sh
 
 `python -m unittest discover .`
-if [[ $? = 0 ]]
+if [ $? = 0 ]
 then
 	echo "> Tests passed !"
 else
